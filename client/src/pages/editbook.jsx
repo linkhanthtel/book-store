@@ -11,6 +11,7 @@ function EditBook() {
   const [isLoading, setIsLoading] = useState(false);
   const navigate = useNavigate();
   const { id } = useParams();
+  
   useEffect(() => {
     setIsLoading(true);
     axios.get(`http://localhost:8888/books/${id}`)
